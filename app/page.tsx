@@ -25,10 +25,10 @@ export default function HomePage() {
                 Call for a Quote
               </a>
               <a
-                href="mailto:info@superiorflatwork.com"
+                href="/contact"
                 className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
               >
-                Email Us
+                Request Estimate
               </a>
             </div>
 
@@ -102,6 +102,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-y border-zinc-200 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-6 px-6 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500 md:grid-cols-4">
+          <p>Residential Concrete</p>
+          <p>Commercial Flatwork</p>
+          <p>Free Estimates</p>
+          <p>Clean, Professional Finish</p>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
@@ -161,29 +170,107 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
-              Process
+              Featured Projects
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
-              A simple process from estimate to finish
+              Show visitors the kind of work you want more of
             </h2>
+            <p className="mt-4 text-lg text-zinc-600">
+              Replace these placeholders with real project photos later. Even
+              now, this section makes the site feel much more complete.
+            </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              ["01", "Consultation", "We learn about your project, goals, and timeline."],
-              ["02", "Estimate", "You get a clear quote and straightforward next steps."],
-              ["03", "Build", "We prepare, pour, and finish your project with care."],
-              ["04", "Final Walkthrough", "We make sure the finished work looks right and lasts."],
-            ].map(([step, title, text]) => (
+              [
+                "Driveway Replacement",
+                "Clean demo, fresh pour, sharp edges, and improved curb appeal.",
+              ],
+              [
+                "Backyard Patio",
+                "A custom concrete patio designed for outdoor living and entertaining.",
+              ],
+              [
+                "Commercial Walkway",
+                "Durable flatwork for safer access and a more professional property look.",
+              ],
+            ].map(([title, text]) => (
               <div
-                key={step}
-                className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm"
+                key={title}
+                className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm"
               >
-                <p className="text-sm font-bold tracking-[0.2em] text-amber-600">
-                  {step}
-                </p>
-                <h3 className="mt-3 text-xl font-bold">{title}</h3>
-                <p className="mt-3 text-zinc-600">{text}</p>
+                <div className="h-64 bg-[linear-gradient(135deg,#d4d4d8,#f4f4f5)]" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold">{title}</h3>
+                  <p className="mt-3 leading-7 text-zinc-600">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+            Process
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+            A simple process from estimate to finish
+          </h2>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-4">
+          {[
+            ["01", "Consultation", "We learn about your project, goals, and timeline."],
+            ["02", "Estimate", "You get a clear quote and straightforward next steps."],
+            ["03", "Build", "We prepare, pour, and finish your project with care."],
+            ["04", "Final Walkthrough", "We make sure the finished work looks right and lasts."],
+          ].map(([step, title, text]) => (
+            <div
+              key={step}
+              className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm"
+            >
+              <p className="text-sm font-bold tracking-[0.2em] text-amber-600">
+                {step}
+              </p>
+              <h3 className="mt-3 text-xl font-bold">{title}</h3>
+              <p className="mt-3 text-zinc-600">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-zinc-950 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-start md:py-24">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
+              Service Area
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+              Proudly serving homeowners and businesses in your area
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-300">
+              Add your main city plus nearby towns here to help visitors know
+              you serve them and to make the site feel more local.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              "Your Main City",
+              "Nearby Town 1",
+              "Nearby Town 2",
+              "Nearby Town 3",
+              "Nearby Town 4",
+              "Nearby Town 5",
+            ].map((city) => (
+              <div
+                key={city}
+                className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-zinc-200"
+              >
+                {city}
               </div>
             ))}
           </div>
@@ -242,10 +329,10 @@ export default function HomePage() {
                   Call Now
                 </a>
                 <a
-                  href="mailto:info@superiorflatwork.com"
+                  href="/contact"
                   className="block rounded-full border border-white/20 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
                 >
-                  Send Email
+                  Request Estimate
                 </a>
               </div>
             </div>
