@@ -161,6 +161,12 @@ export default function HomePage() {
               </div>
               <h3 className="mt-5 text-2xl font-bold">{title}</h3>
               <p className="mt-3 leading-7 text-zinc-600">{text}</p>
+              <a
+                href="/services"
+                className="mt-5 inline-block font-semibold text-amber-700"
+              >
+                Learn more →
+              </a>
             </div>
           ))}
         </div>
@@ -176,8 +182,7 @@ export default function HomePage() {
               Show visitors the kind of work you want more of
             </h2>
             <p className="mt-4 text-lg text-zinc-600">
-              Replace these placeholders with real project photos later. Even
-              now, this section makes the site feel much more complete.
+              Replace these placeholders with real project photos later.
             </p>
           </div>
 
@@ -253,7 +258,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-300">
               Add your main city plus nearby towns here to help visitors know
-              you serve them and to make the site feel more local.
+              you serve them.
             </p>
           </div>
 
@@ -301,6 +306,85 @@ export default function HomePage() {
               <p className="mt-5 font-semibold text-zinc-900">— {name}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-zinc-50">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:items-start md:py-24">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+              Request a Quote
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+              Tell us about your project
+            </h2>
+            <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-600">
+              Fill out the form and use it as your lead section for homeowners
+              and businesses looking for concrete work.
+            </p>
+
+            <div className="mt-8 space-y-3 text-zinc-600">
+              <p>• Driveways and replacements</p>
+              <p>• Patios and outdoor concrete</p>
+              <p>• Sidewalks and garage slabs</p>
+              <p>• Commercial flatwork</p>
+            </div>
+          </div>
+
+          <form className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
+            <div className="grid gap-4 md:grid-cols-2">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="rounded-2xl border border-zinc-300 px-4 py-3 outline-none"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="rounded-2xl border border-zinc-300 px-4 py-3 outline-none"
+              />
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="rounded-2xl border border-zinc-300 px-4 py-3 outline-none"
+              />
+              <input
+                type="text"
+                placeholder="City / Service Area"
+                className="rounded-2xl border border-zinc-300 px-4 py-3 outline-none"
+              />
+            </div>
+
+            <div className="mt-4">
+              <select className="w-full rounded-2xl border border-zinc-300 px-4 py-3 outline-none">
+                <option>Project Type</option>
+                <option>Driveway</option>
+                <option>Patio</option>
+                <option>Sidewalk</option>
+                <option>Garage Slab</option>
+                <option>Commercial Flatwork</option>
+                <option>Repair / Replacement</option>
+              </select>
+            </div>
+
+            <div className="mt-4">
+              <textarea
+                rows={5}
+                placeholder="Tell us about your project"
+                className="w-full rounded-2xl border border-zinc-300 px-4 py-3 outline-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="mt-6 w-full rounded-full bg-zinc-950 px-6 py-3 font-semibold text-white transition hover:opacity-95"
+            >
+              Send Request
+            </button>
+          </form>
         </div>
       </section>
 
