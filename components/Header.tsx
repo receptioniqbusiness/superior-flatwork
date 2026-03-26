@@ -1,16 +1,18 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-zinc-200">
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <h1 className="text-lg font-black text-zinc-900">
+    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link href="/" className="text-lg font-black text-zinc-900">
           Superior Flatwork
-        </h1>
+        </Link>
 
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-zinc-700">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        <nav className="hidden gap-6 text-sm font-medium text-zinc-700 md:flex">
+          <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
 
         <a
